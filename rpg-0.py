@@ -6,6 +6,44 @@ In this simple RPG game, the hero fights the goblin. He has the options to:
 3. flee
 
 """
+class Hero():
+    def __init__(self, hero_health, hero_power):
+        self.health = hero_health
+        self.power = hero_power
+    
+    def attack(self,Goblin):
+        user_input = input()
+        Goblin.ghealth -= self.power
+        print("You do %d damage to the goblin." % self.power)
+        if Goblin.ghealth <= 0:
+            print("The goblin is dead.")
+        elif user_input == "2":
+            pass
+        elif user_input == "3":
+            print("Goodbye.")
+            break
+        else:
+            print("Invalid input %r" % user_input)
+
+class Goblin(): 
+    def __init__(self, goblin_health, goblin_power):
+        self.ghealth = goblin_health
+        self.gpower = goblin_power
+
+    def goblinattack(self, Hero)
+        if goblin_health > 0:
+            # Goblin attacks hero
+        hero_health -= goblin_power
+            print("The goblin does %d damage to you." % goblin_power)
+            if hero_health <= 0:
+                print("You are dead.")
+
+
+
+
+
+
+
 
 def main():
     hero_health = 10
@@ -23,19 +61,19 @@ def main():
         print("3. flee")
         print("> ",)
         user_input = input()
-        if user_input == "1":
-            # Hero attacks goblin
-            goblin_health -= hero_power
-            print("You do %d damage to the goblin." % hero_power)
-            if goblin_health <= 0:
-                print("The goblin is dead.")
-        elif user_input == "2":
-            pass
-        elif user_input == "3":
-            print("Goodbye.")
-            break
-        else:
-            print("Invalid input %r" % user_input)
+        # if user_input == "1":
+        #     # Hero attacks goblin
+        #     goblin_health -= hero_power
+        #     print("You do %d damage to the goblin." % hero_power)
+        #     if goblin_health <= 0:
+        #         print("The goblin is dead.")
+        # elif user_input == "2":
+        #     pass
+        # elif user_input == "3":
+        #     print("Goodbye.")
+        #     break
+        # else:
+        #     print("Invalid input %r" % user_input)
 
         if goblin_health > 0:
             # Goblin attacks hero
